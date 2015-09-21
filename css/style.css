@@ -1,0 +1,783 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+
+/* 
+   Reset.css
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Animation*/
+@keyframes opacity {
+    from {opacity:0;}
+    to {opacity: 1;}
+}
+
+/*Style Page*/
+body{
+	font-size:12px;
+	font-family: 'Open Sans', sans-serif;
+	color:#4d4d4d;
+}
+
+section.blocEnTete{
+	height:550px;
+	background: url("../images/backgroundEnTete.jpg") no-repeat center;
+	width:100%;
+}
+
+section.blocPresentation{
+	height:650px;
+	background: url("../images/photoBloc2.jpg") no-repeat right;
+	width:100%;
+}
+
+section.blocFonctionalites{
+	height: 875px;
+	background:white;
+	width:100%;
+}
+
+section.blocRejoindre{
+	height:300px;
+	background:#b3b3b3;
+	width:100%;
+}
+
+section.blocContact{
+	height: 950px;
+	background:white;
+	width:100%;
+}
+
+section.blocPhotos{
+	height: 575px;
+	background:rgb(212,203,208);
+	width:100%;
+}
+
+footer{
+	height:50px;
+	background:#ff6d00;
+	width:100%;	
+}
+
+#buttonCallToAction
+{
+    display:block;
+    background: #ff6d00 none repeat scroll 0 0;
+    border: 5px solid white;
+    height: 80px;
+    margin: 50px auto 0;
+    position: relative;
+    width: 465px;
+    text-decoration: none;
+    -webkit-transition: background 1s; /* Safari */
+    transition: background 1s;
+}
+
+#buttonCallToAction:hover {
+    background: #A82022;
+} 
+
+section.blocEnTete h1{
+	position: relative;
+	color:white;
+	text-align:center;
+	padding-top:70px;
+	font-size: 2.5em;
+	font-weight:600;
+}
+
+section.blocEnTete #logo{
+    background-image: url("../images/logo.png");
+    height: 126px;
+    margin: 50px auto 0;
+    width: 468px;
+    animation-name: opacity;
+    animation-duration: 5s;
+}
+
+#buttonCallToAction span {
+    color: white;
+    display: block;
+    font-size: 1.5em;
+    line-height: 80px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+section.blocEnTete::after {
+    background: rgba(0, 0, 0, 0) url("../images/triangle.png") no-repeat scroll center center;
+    content: "";
+    display: block;
+    height: 37px;
+    left: 50%;
+    margin: 0 auto 0 -28px;
+    position: absolute;
+    top: 550px;
+    width: 56px;
+}
+
+section div#leftPresentation{
+	content: "";
+    display: block;
+    width:50%;
+    height:500px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100 */
+	background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+	background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+
+#bottomPresentation {
+    bottom: 0;
+    height: 150px;
+    position: relative;
+    width: 100%;
+}
+
+#leftBottomPresentation {
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    position: relative;
+    width: 50%;
+}
+
+#rightBottomPresentation {
+    display: inline-block;
+    float: right;
+    height: 100%;
+    right: 0;
+    width: 50%;
+}
+
+#rightBottomPresentation::before {
+    background: white none repeat scroll 0 0;
+    content: "";
+    display: block;
+    height: 100%;
+    margin-left: -3px;
+    width: 6px;
+    position:absolute;
+}
+
+h2{
+	padding-top:40px;
+	text-align:center;
+	font-size:3em;
+	font-weight:600;
+	text-transform:uppercase;
+}
+
+h2::after
+{
+	content:'';
+	display:block;
+	width:125px;
+	height:6px;
+	margin:0 auto;
+	background:#ff6d00;
+	margin-top:15px;
+}
+
+#illuTel {
+    background: rgba(0, 0, 0, 0) url("../images/telFonctionalite.jpg") no-repeat scroll center center;
+    height: 574px;
+    left: 50%;
+    margin: 100px auto 0 -161.5px;
+    position: absolute;
+    width: 321px;
+}
+
+.blocRejoindre > p {
+    color: #ff6d00;
+    text-align: center;
+    font-size:1.5em;
+    margin-top:25px;
+}
+
+.blocRejoindre form {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.blocContact form input {
+    background: #f1f1f1 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 20px;
+    color: #b3b3b3;
+    display: block;
+    height: 70px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    width: 400px;
+    font-size: 1.4em;
+}
+
+
+.blocContact form textarea {
+	font-size: 1.4em;
+    background: rgb(241, 241, 241) none repeat scroll 0 0;
+    border: medium none;
+    color: #b3b3b3;
+    border-radius: 20px;
+    height: 200px;
+    padding: 35px 20px;
+    width: 100%;
+}
+
+
+.blocContact > form {
+    margin: 70px auto 0;
+    width: 800px;
+}
+
+.blocContact input#submitContact {
+    background: rgba(255, 109, 0, 1);
+    color: white;
+    cursor: pointer;
+    font-size: 1.7em;
+    margin-top: 30px;
+    -webkit-transition: background 1s; /* Safari */
+    transition: background 1s;
+}
+
+.blocContact input#submitContact:hover {
+    background: #A82022;
+} 
+.blocContact input#submitContact::before {
+    background: rgba(0, 0, 0, 0) url("../images/btnSend.jpg") no-repeat scroll center center;
+    width:64px;
+    height:47px;
+}
+
+#bottomPresentation div > h3 {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-left: 35px;
+    margin-right: 25px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+
+#bottomPresentation div > p {
+    color: white;
+    font-size: 1.4em;
+    line-height: 1.4em;
+    margin-left: 35px;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+
+#leftPresentation > span {
+    color: #ff6d00;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: 600;
+    margin-left: 100px;
+    margin-top: 135px;
+}
+
+
+#leftPresentation li {
+    background: rgba(0, 0, 0, 0) url("../images/plume.png") no-repeat scroll left top;
+    color: #ff6d00;
+    font-size: 1.6em;
+    list-style: outside none none;
+    margin-left: 100px;
+    padding: 25px 0 25px 65px;
+}
+
+#leftPresentation ul {
+	margin-top:20px;
+}
+
+
+.blocPhotos #blocJo{
+	background: rgba(0, 0, 0, 0) url("../images/photoJo.jpg") no-repeat scroll left top;
+	display:inline-block;
+	height:250px;
+	width:250px;
+	position: absolute;
+	left:50%;
+	margin-left: -270px;
+	margin-top: 75px;
+}
+
+.blocPhotos #blocPi{
+	background: rgba(0, 0, 0, 0) url("../images/photoPi.jpg") no-repeat scroll left top;
+	display:inline-block;
+	height:250px;
+	width:250px;
+	position: absolute;
+	left:50%;
+	margin-left:20px;
+	margin-top: 75px;
+}
+
+footer div #btnFacebook{
+	background: rgba(0, 0, 0, 0) url("../images/footer/facebook.jpg") no-repeat scroll left top;
+	display:inline-block;
+	height:40px;
+	width:40px;
+}
+
+footer div #btnTwitter {
+    background: rgba(0, 0, 0, 0) url("../images/footer/twitter.jpg") no-repeat scroll left top;
+    display: inline-block;
+    height: 40px;
+    margin-left: 5px;
+    width: 40px;
+}
+
+footer #logoFooter {
+    background: rgba(0, 0, 0, 0) url("../images/footer/logo.jpg") no-repeat scroll left top;
+    display: inline-block;
+    height: 40px;
+    left: 50%;
+    margin-left: -97.5px;
+    margin-top: 5px;
+    position: absolute;
+    width: 195px;
+}
+
+#btnSocialRed {
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+
+footer span {
+    color: white;
+    float: right;
+    font-size: 1.2em;
+    line-height: 50px;
+    margin-right: 50px;
+}
+
+.blocPhotos div > p {
+    font-size: 1.5em;
+    padding-top: 275px;
+    text-align: center;
+}
+
+.blocPhotos div p span {
+    font-weight: 700;
+}
+
+.blocFonctionalites #colonneGaucheFonctionalite {
+    left: 50%;
+    margin-left: -500px;
+    position: absolute;
+    width:300px;
+}
+
+.blocFonctionalites #colonneDroiteFonctionalite {
+    left: 50%;
+    margin-left: 200px;
+    width:300px;
+    position: absolute;
+}
+
+.presentationProduit {
+    margin-top: 135px;
+}
+
+.presentationProduit li {
+    font-size: 1.3em;
+    line-height: 1.3em;
+    margin-top: 20px;
+    padding-top: 25px;
+}
+
+.presentationProduit span {
+    color: #ff6d00;
+    display: block;
+}
+
+#colonneGaucheFonctionalite li {
+    background: rgba(0, 0, 0, 0) url("../images/plume.png") no-repeat scroll right top;
+    padding-right: 60px;
+}
+
+#colonneDroiteFonctionalite li {
+	background: rgba(0, 0, 0, 0) url("../images/plume.png") no-repeat scroll left top;
+	padding-left: 60px;
+}
+
+.blocRejoindre input {
+    color: #b3b3b3;
+}
+
+.blocRejoindre input#submitJoin {
+    background: #ff6d00 none repeat scroll 0 0;
+    border: 0 none;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    color: white;
+    font-size: 1.5em;
+    height: 60px;
+    margin: -2px;
+    width: 135px;
+    cursor: pointer;
+    -webkit-transition: background 1s; /* Safari */
+    transition: background 1s;
+}
+
+.blocRejoindre input#submitJoin:hover {
+    background: #A82022;
+} 
+
+.blocRejoindre input#champJoin {
+    border: 0 none;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    color: #b3b3b3;
+    font-size: 1.3em;
+    height: 60px;
+    margin: 0;
+    padding: 0 0 0 10px;
+    width: 585px;
+}
+
+header{
+	width:100%;
+	background:#ff6d00;
+	height:50px;
+	position:fixed;
+	z-index:1000;
+	top:-50px;
+	opacity:0.8;
+}
+
+
+#logoHeader {
+    background: rgba(0, 0, 0, 0) url("../images/header/logo.png") no-repeat scroll right top;
+    height: 30px;
+    left: 50px;
+    position: absolute;
+    top: 10px;
+    width: 111px;
+}
+
+
+header span {
+    color: white;
+    font-size: 1.3em;
+    line-height: 50px;
+    position: absolute;
+    right: 50px;
+}
+
+header span a{
+    color: white;
+    text-decoration: none;
+}
+
+
+@media(max-width: 1025px) {
+	#illuTel {
+	    left: 100px;
+	    margin: 100px auto 0;
+	    position: absolute;
+	    top: 1300px;
+	}
+	.blocFonctionalites #colonneGaucheFonctionalite{
+	    left: 50%;
+	    margin-left: 0;
+	    position: relative;
+	    width: 400px;
+	}
+	.blocFonctionalites #colonneDroiteFonctionalite {
+	    left: 50%;
+	    margin-left: 0;
+	    position: relative;
+	    width: 400px;
+	    margin-top:0px;
+	}
+	#colonneGaucheFonctionalite li, #colonneDroiteFonctionalite li {
+	    background:none;
+	    padding:0;
+	}
+}
+
+@media(max-width: 885px) {
+	#illuTel {
+		display:none;
+	}
+	
+	.blocFonctionalites #colonneGaucheFonctionalite,.blocFonctionalites #colonneDroiteFonctionalite{
+		left:100px;
+	}
+	#colonneDroiteFonctionalite ul, #colonneGaucheFonctionalite ul {
+   		list-style:square;
+	}
+	.presentationProduit {
+	    margin-top: 50px;
+	}
+
+	section.blocFonctionalites {
+	    height: 725px;
+	}
+
+	#bottomPresentation div > p {
+	    font-size: 1.2em;
+	    line-height: 1.2em;
+	}
+	.blocContact > form {
+	    width: 600px;
+	}
+}
+
+@media(max-width: 750px) {
+	section.blocEnTete h1 {
+	    font-size: 2em;
+	}
+	.blocRejoindre input#champJoin {
+	    width: 400px;
+	}
+}
+
+@media(max-width: 700px) {
+	header span {
+		display: none
+	}
+	#logoHeader {
+	    left: 50%;
+	    margin-left: -65.5px;
+	}
+	footer span {
+		display:none;
+	}
+	#btnSocialRed{
+		display:none;
+	}
+	.blocContact > form {
+	    width: 400px;
+	}
+	.blocContact form input {
+	    width: 200px;
+	}
+	.blocContact input#submitContact {
+	    font-size: 1.2em;
+	}
+	.blocRejoindre > p {
+	    font-size: 1.3em;
+	}
+	#leftPresentation > span {
+	    margin-top: 75px;
+	    font-size: 1.5em;
+	}
+}
+
+@media(max-width: 600px) {	
+	section.blocEnTete h1 {
+	    font-size: 1.5em;
+	}
+
+	section.blocEnTete #logo {
+	    background-image: url("../images/logo-mini.png");
+	    height: 67px;
+	    width: 250px;
+	}
+	#buttonCallToAction {
+	    width: 275px;
+	}
+	#buttonCallToAction span {
+	    font-size: 1em;
+	}
+	#leftPresentation > span {
+	    margin-left: 50px;
+	    margin-right:50px;
+	}
+	section div#leftPresentation {
+	    background: rgba(250, 250, 250, 0.1) none repeat scroll 0 0;
+	    width:100%;
+	}
+	#leftPresentation li {
+	    margin-left: 50px;
+	    margin-right: 50px;
+	}
+	#leftPresentation > span {
+	    line-height: 1.3em;
+	}
+
+	#bottomPresentation div > h3 {
+	    font-size: 1.1em;
+	}
+
+	section.blocPresentation {
+	    height: 550px;
+	}
+	section div#leftPresentation {
+	    height: 415px;
+	}
+}
+
+@media(max-width: 500px) {	
+	#blocPhotos{
+		display:none;
+	}
+	.blocContact > form {
+	    width: 300px;
+	}
+	.blocContact form input {
+	    width: 150px;
+	}
+	.blocContact form input {
+	    height: 40px;
+	    width: 175px;
+	}
+	.blocContact input#submitContact{
+	    font-size: 1em;
+	    padding-left: 10px;
+	}
+	section.blocContact {
+	    height: 800px;
+	}
+
+	.blocRejoindre input#champJoin {
+	    width: 200px;
+	}
+	.blocRejoindre > p {
+	    font-size: 1em;
+	}
+	.blocFonctionalites #colonneGaucheFonctionalite, .blocFonctionalites #colonneDroiteFonctionalite {
+	    left: 25px;
+	    right: 25px;
+	}
+	section div#leftPresentation {
+	    height: 375px;
+	}
+	#bottomPresentation {
+	    height: 175px;
+	}
+	#colonneDroiteFonctionalite ul, #colonneGaucheFonctionalite ul {
+	    margin-right: 40px;
+	}
+}
+
+@media(max-width: 420px) {
+	section div#leftPresentation {
+	    height: 345px;
+	}
+
+	#bottomPresentation {
+	    height: 205px;
+	}
+}
+
+@media(max-width: 375px) {
+	#leftPresentation > span {
+	    font-size: 1.3em;
+	    margin-top: 50px;
+	}
+
+	section div#leftPresentation {
+	    height: 310px;
+	}
+	#leftPresentation li {
+	    font-size: 1.2em;
+	    margin-left: 50px;
+	    padding: 10px 0 25px 65px;
+	}
+	section.blocPresentation {
+	    background: rgba(0, 0, 0, 0) url("../images/photoBloc2.jpg") no-repeat scroll 90% center;
+	}
+	#bottomPresentation div > h3 {
+	    font-size: 1em;
+	}
+	#bottomPresentation div > p {
+	    font-size: 1em;
+	    line-height: 1em;
+	}
+	#bottomPresentation {
+	    height: 240px;
+	}
+	#rightBottomPresentation::before {
+	    width: 4px;
+	    margin-left: -2px;
+	}
+	h2 {
+	    font-size: 2em;
+	}
+
+	.blocContact > form {
+	    width: 250px;
+	}
+	.blocFonctionalites #colonneGaucheFonctionalite, .blocFonctionalites #colonneDroiteFonctionalite {
+	    width: 250px;
+	}
+	section.blocFonctionalites {
+	    height: 850px;
+	}
+
+	.blocRejoindre > p {
+	    font-size: 1em;
+	    margin: 15px;
+	}
+	.blocRejoindre input#champJoin {
+	    width: 150px;
+	}
+	.blocRejoindre input#submitJoin {
+	    width: 100px;
+	}
+	.blocContact form textarea {
+	    width: 200px;
+	}
+}

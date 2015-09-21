@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>IGuideU - Rejoignez la communauté</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+	<header>
+		<a href='#blocEnTete' id='logoHeader'></a>
+		<span><a href="#blocFonctionalites">Fonctionalités</a> | <a href="#blocRejoindre">Nous rejoindre</a> | <a href="#blocContact">Contact</a> | <a href="#blocPhotos">L'équipe iGuideU</a></span> 
+	</header>
+	<section id="blocEnTete" class="blocEnTete">
+		<h1>Redécouvrez votre ville d'une nouvelle manière</h1>
+		<div id="logo"></div>
+		<a href="#blocRejoindre" id="buttonCallToAction"><span>Rejoignez la communauté</span></a>
+	</section>
+	<section class="blocPresentation">
+		<div id="leftPresentation">
+			<span>Découvrez ou redécouvrez avec vos différents sens à travers des descriptions sonores</span>
+			<ul>
+				<li>Se recentrer sur ses sens</li>
+				<li>Se plonger en immersion et prendre le temps de vivre</li>
+			</ul>
+		</div>
+		<div id="bottomPresentation">
+			<div id="leftBottomPresentation">
+				<h3>Découverte culturelle et artistique</h3>
+				<p>
+					Humoriste : Suivez nos joyeux crieurs publics.<br />
+					Slameur : découvrez la ville à travers la poésie de Cocteau Mot Lotov.
+				</p>
+			</div>
+
+			<div id="rightBottomPresentation">
+				<h3>Immersion</h3>
+				<p>
+					Écoutez les habitants du quartier et des voyageurs racontant leur ville comme vous ne l’avez jamais vue.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="blocFonctionalites" id="blocFonctionalites">
+		<h2>Fonctionalités</h2>
+		<div class="presentationProduit" id="colonneGaucheFonctionalite">
+			<ul>
+				<li><span>Lecture de capsule/témoignage audio</span></li>
+				<li><span>Écouter et enregistrez vous simplement dans iGuideU</span></li>
+				<li><span>Géolocalisation</span> Déambulez dans les rues et laissez IGuideU vous guider</li>
+				<li><span>Ergonomie agréable</span></li>
+				<li><span>Personnalisation de l’application</span></li>
+			</ul>
+		</div>
+		<div id="illuTel"></div>
+		<div class="presentationProduit" id="colonneDroiteFonctionalite">
+			<ul>
+				<li><span>Gratuite</span></li>
+				<li><span>Recherche sensorielle</span></li>
+				<li><span>Système de notation et de commentaire des contenus audios</span></li>
+				<li><span>Suivre vos guides préférés</span></li>
+				<li><span>Accessibilité</span>L’application est développée pour le confort de tous les utilisateurs. Le premier guide touristique digitale accessible aux personnes malvoyantes</li>
+			</ul>
+		</div>
+	</section>
+	<section class="blocRejoindre" id="blocRejoindre">
+		<h2>Rejoignez la communauté</h2>
+		<p>Envie d’intégrer la communauté iGuideU ? Inscrivez vous tout de suite !</p>
+		<form action="#" method="post" >
+			<input type="text" id="champJoin" name="email" value="votre adresse e-mail">
+			<input type="submit" id="submitJoin" value="Rejoindre !">
+		</form>
+	</section>
+	<section class="blocContact" id="blocContact">
+		<h2>Contactez-nous !</h2>
+		<form action="#" method="post" >
+			<input type="text" name="nom" value="votre nom">
+			<input type="text" name="email" value="votre adresse e-mail">
+			<input type="text" name="email" value="l'objet de votre message">
+			<textarea name="textarea" rows="10" cols="50">votre message</textarea>
+			<input type="submit" value="Envoyer votre message" id="submitContact">
+		</form>
+	</section>
+	<section class="blocPhotos" id="blocPhotos">
+		<h2>L'équipe iGuideU</h2>
+		<div id="blocJo">
+			<p><span>Jonathan</span> Co-fondateur <br />Chargé de relations</p>
+		</div>
+		<div id="blocPi">
+			<p><span>Pierre</span> Co-fondateur <br />Directeur technique</p>
+		</div>
+	</section>
+	<footer>
+		<div id="btnSocialRed">
+			<a id='btnFacebook' href='https://www.facebook.com/i-Guide-U-1583755471838743'></a>
+			<a id='btnTwitter' href='https://mobile.twitter.com/iGuideUapp?p=s'></a>
+		</div>
+		<div id="logoFooter"></div>
+		<span>Mentions légales - IGuideU <?php echo date("Y"); ?></span>
+	</footer>
+</body>
+<script type="text/javascript">
+	
+	$('a[href^="#"]').click(function(){
+		var the_id = $(this).attr("href");
+
+		$('html, body').animate({
+			scrollTop:$(the_id).offset().top
+		}, 'slow');
+		return false;
+	});
+
+   	$(document).scroll(function() {
+  		if ($(this).scrollTop() >= 570) {
+			$( "header" ).stop().animate({top:'0px'}, 500);
+  		} else if ($(this).scrollTop() < 570){
+    		$( "header" ).stop().animate({top:'-50px'}, 500);
+  		}
+	});
+
+
+</script>
+</html>
